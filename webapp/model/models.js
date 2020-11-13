@@ -10,7 +10,7 @@ sap.ui.define([
 			//Set Model on View
 			var oData = {
 				recipient: {
-					name: "Word"
+					name: "Wordl"
 				}
 			};
 

@@ -30,6 +30,7 @@ sap.ui.define([
 					controller: oFragmentController // nuevo controlador que se encargara de controlar las acciones 
 				}).then(function (oDialog) {
 					oView.addDependent(oDialog);
+					//obtenemos la clase getContentD... del componente de acuerdo al dispositivo conectado
 					syncStyleClass(oView.getController().getOwnerComponent().getContentDensityClass(), oView, oDialog);
 					oDialog.open();
 				});

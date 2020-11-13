@@ -1,5 +1,14 @@
 <mvc:View controllerName="indra.SAPUI5.controller.App" xmlns="sap.m" xmlns:mvc="sap.ui.core.mvc" displayBlock="true">
 	<Page title="{i18n>homePageTitle}">
+		<landmarkInfo>
+			<PageAccessibleLandmarkInfo
+				rootRole="Region"
+				rootLabel="{i18n>overViewRootLabel}"
+				contentRole="Main"
+				contentLabel="{i18n>overView_contentLabel}"
+				headerRole="Banner"
+				headerLabel="{i18n>overView_headeerLabel}" 	/>
+		</landmarkInfo>
 		<headerContent>
 			<Button id="helloDialogHeader" press=".onOpenHeader" class="sapUiSmallMarginEnd" icon="sap-icon://world"/>
 		</headerContent>

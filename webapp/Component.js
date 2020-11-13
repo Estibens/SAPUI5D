@@ -59,9 +59,9 @@ sap.ui.define([
 				this._helloDialog.open(); //lamamos a la función open de HelloDialog.js
 			},
 
-			//Se asigna una clase de acuerdo al dispositivo que se conecto
+			//Devuelve una clase de acuerdo al dispositivo que se conecto
 			getContentDensityClass: function () {
-				if (!Device.support.touch) {
+				if (!Device.support.touch) { //no se trata de un dispositivo tactil
 					this._sContentDensityClass = "sapUiSizeCompact"; //desktop
 				} else {
 					this._sContentDensityClass = "sapUiSizeCozy"; //tactial
