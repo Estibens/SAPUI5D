@@ -1,0 +1,10 @@
+.myCustomCss .myCustomText{
+	display: inline-block;
+	font-weight:bold;
+}
+.productRatin {
+	padding: 0.75rem;
+}
+.productRatin .sapMRI {
+	vertical-align: initial;
+}

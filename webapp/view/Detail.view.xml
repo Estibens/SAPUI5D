@@ -1,0 +1,22 @@
+<mvc:View xmlns:core="sap.ui.core" xmlns:mvc="sap.ui.core.mvc" xmlns="sap.m" controllerName="indra.SAPUI5.controller.Detail"
+	xmlns:html="http://www.w3.org/1999/xhtml" xmlns:lp="indra.SAPUI5.control">
+	<Page title="{i18n>detailPageTitle}" showNavButton="true" navButtonPress=".onNavBack">
+		<ObjectHeader 
+			responsive="true"
+			fullScreenOptimized="true"
+			intro="{invoiceWz>ShipperName}"
+			title="{invoiceWz>ProductName}"
+			number="{ 
+					parts: [{path: 'invoiceWz>ExtendedPrice'}, {path: 'view>/currency'}],  
+					type: 'sap.ui.model.type.Currency', 
+				    formatOptions:{ 	showMeasure: false }
+				    }"
+			numberUnit="{view>/currency}"> 
+			<attributes>
+				<ObjectAttribute title="{i18n>quantityTitle}" text="{invoiceWz>Quantity}">
+				</ObjectAttribute>
+			</attributes>
+		</ObjectHeader>
+		<lp:ProductRating id="rating" class="sapUiSmallMarginBeginEnd" change=".onRatingChange"/>
+	</Page>
+</mvc:View>

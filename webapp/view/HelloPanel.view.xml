@@ -1,0 +1,14 @@
+<mvc:View controllerName="indra.SAPUI5.controller.HelloPanel" xmlns="sap.m" xmlns:mvc="sap.ui.core.mvc" xmlns:core="sap.ui.core">
+	<Panel headerText="{i18n>helloPanelTitle}" class="sapUiResponsiveMargin" width="auto"
+	expandable="{device>/system/phone}"
+	expanded="{= !${device>/system/phone} }">
+		<content>
+			<Button id="helloDialogButton" text="{i18n>openDialogButtonText}" press=".onOpenDialog" 
+			class="sapUiSmallMarginEnd sapUiVisibleOnlyOnDesktop" icon="sap-icon://world"/>
+			<Button text="{i18n>showHelloButtonText}" press=".onShowHello" class="sapUiSmallMarginEnd sapUiHideOnDesktop"/>
+			<Input value="{/recipient/name}" valueLiveUpdate="true" width="60%"/>
+			<Text text="Hola {/recipient/name}" class="sapUiSmallMargin myCustomText sapTheminglight-asColor"/>
+		</content>
+	</Panel>
+	<core:Fragment fragmentName="indra.SAPUI5.view.Form01" type="XML"/>
+</mvc:View>
